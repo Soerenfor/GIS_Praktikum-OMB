@@ -210,3 +210,65 @@ p.teamriderski {
   color: white;
 }
 
+
+
+
+@media (max-width: 375px) {
+ h1 {
+    color:black;
+    position: absolute;
+    left: 400px;
+  }
+
+  .fotostart{
+    width: 375;
+    height: 200;
+  }
+  .event {
+    position: absolute;
+    left: 1280px;
+  }
+  .goto {
+    position: absolute; 
+    left:1350px;
+  }
+  .start {
+    position: absolute; 
+    left: 1210px;
+  }
+
+  .fotoevent{
+    width: 375;
+    height: 200;
+  }
+  #fülltext {
+    position: relative;
+    left: 490px;
+    bottom: 230px;
+  }
+
+  #fülltext1{
+    position: relative;
+    left: 930px;
+    bottom: 660px;
+  }
+
+  .audio {
+    position: relative;
+    bottom: 930px;
+    left: 10px;
+  }
+  
+  .textu{
+    position: relative;
+    bottom: 900px;
+    left: 10px;
+  }
+
+  .absolut{
+    position: relative;
+    bottom: 870px;
+    left: 10px;
+  }
+
+}
