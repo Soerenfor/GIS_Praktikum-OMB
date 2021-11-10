@@ -6,3 +6,7 @@
 ### **2. CSS-Grundlagen**
  * Code: https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/Aufgabe2 
  * GitHub Pages: http://127.0.0.1:5500/Aufgabe2/Startseite.html
+
+### **3. Typescript**
+ * Code: https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe3
+ * GitHub Pages: http://127.0.0.1:5500/aufgabe3/event.html
