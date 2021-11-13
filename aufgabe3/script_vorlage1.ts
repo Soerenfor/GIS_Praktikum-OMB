@@ -54,31 +54,39 @@ let events: any[][] = [
 // -- HIER BITTE IHRE LÖSUNG ZUR AUFGABE 2 EINTRAGEN
 
 // Lösung a) 
-console.log("Die länge beträgt:" events.length);
+console.log("Die länge beträgt:", events.length);
 
 // Lösung b) 
 for (let i: number = 0; i < events.length; i++) {
-  console.log(events [i]);
+  console.log(events[i] [0], events [i] [1]);
 }
 
 // Lösung c) 
-let max: number = 0;
-for (var i = 1; i < events.length; i++){
-if (events[0][1][i] > events[0][1][i+1])
-max = events[0][1][i];
-console.log("Das teuerste Ticket kostet:", max);
+function maxPrice(m: any[][]): number{
+  let result = 0;
+  for (var i = 1; i < m.length; i++){
+if (m[i] [1] > result){
+  result = m [i] [1]; 
 }
+  }
+  return result;
+}
+ let max = maxPrice(events);
+console.log(max);
+
 
 
 // Lösung d) ...
-function name (s: string){
-  for (var i = 1; i < events.length; i++) {
-    if (events[1] [0] [i]  == s)
+function namesuchen (s: any[] [], interpret:  string): boolean {
+  for (var i = 1; i < s.length; i++) {
+    if (s[i][0] == interpret){
     return true;
-    else
-    return false;
   }
 }
+return false;
+}
+
+console.log(namesuchen(events, "Michael Bublé"));
 
 // Lösung e) 
 function factorial(n: number) { 
@@ -91,12 +99,15 @@ function factorial(n: number) {
 
 // Lösung f) 
 function teilbar() {
-  for (let i: number = 1; i <= 100; i++) {
+  let counter: number = 0;
+  for (let i: number = 0; i <= 100; i++) {
     if (i % 3 == 0)
+    counter++;
     console.log(i);
-  }
-  
+  }  
+  console.log(" Der Count ist:", counter);
 }
+
 
 // Lösung g)
 class ConcertEvent {
@@ -112,10 +123,11 @@ constructor(interpret: string, price: number){
 show(){
   console.log(this.interpret + this.price);
 }
+}
 
 
 // Lösung h)
-var concerts: ConcertEvent[]; 
+var concerts: ConcertEvent[] = []; 
 concerts.push(new ConcertEvent ("Mark Knopfler", 10.1));
 concerts.push(new ConcertEvent ("Pink Floyd", 15.9));
 concerts.push(new ConcertEvent ("Metallica", 20.1));
@@ -128,7 +140,8 @@ concerts.push(new ConcertEvent ("Helene Fischer", 3.1));
 concerts.push(new ConcertEvent ("Bee Gees", 25.2));
 
 for (let l = 0; l < concerts.length; l++){
-  concerts[l].show;
+ console.log(concerts[l].show());
+
 }
 
 
