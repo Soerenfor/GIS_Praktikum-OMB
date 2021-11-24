@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset= "utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Absolutpark Events  </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Fruktur&display=swap" rel="stylesheet">
+        <link href="https://fonts.google.com/specimen/Fruktur#standard-styles"/>
+        
+        
+        <link rel="stylesheet" href="style.css">
+        <script src="domtabelle.js" defer></script> 
+    </head>
+    <body>
+      <nav>
+        <a class="event" href="event.html" target="_parent" title="Eventseite">Events</a>
+        <a class="start" href="Startseite.html" target="_parent" title="Startseite">Home</a>
+        <a class="goto"  href="#liste">Go to Section Liste</a>
+      </nav>
+      <header>  </header>
+
+        <h1 class="headevent"> Absolut Park Events  </h1> 
+
+        <main> 
+            <img class="fotoevent"
+            src= "Foto/philipp-kammerer-BOMJAHOLhFk-unsplash.jpg"
+            width="520"
+            height="300"
+ />
+
+ <table style="width:32%">
+                
+    <tr>
+      <th>Event</th>
+      <th>Datum</th> 
+      <th>Uhrzeit</th>
+      <th>Ort</th>
+
+    </tr>
+    <tr>
+      <td>Spring Battle</td>
+      <td>18.01</td> 
+      <td>10:10 Uhr</td>
+      <td>Shuttel Berg</td>
+    </tr>
+    <tr>
+      <td>Rail Battle</td>
+      <td>04.02</td> 
+      <td>12:30Uhr</td>
+      <td>Shuttel Berg</td>
+    </tr>
+    <tr>
+        <td>Jib King</td>
+        <td>20.02</td> 
+        <td>09:30Uhr</td>
+        <td>Shuttel Berg</td>
+      </tr>
+  </table>
+  <br/>
+<div id="springbattle"> 
+  <h3>Springbattle</h3>
+  <p class="erklärungspring"> 
+    Zum Spring Battle treffen sich Freeski- und Snowboard-Pros aus der ganzen Welt, <br/>
+    um bei diesem innovativen Contest ihr <span data-descr="Ende der Saison diese findet meist im März des Jahres statt">Season-End</span> zu feiern. <br />
+    Die Fahrer haben dabei fünf Tage Zeit, an ihren Tricks zu feilen und ihren perfekten Run zu zeigen. <br />
+    Das <span data-descr="die Rider filmen sich dabei gegenseitig">Follow Cam Format</span> ist bei den Fahrern sehr beliebt. <br />
+    Jeder Teil-nehmer, der nach den fünf Contest-Tagen ein ungeschnittenes Video seines besten Runs einreicht, <br />
+    wird am letzten Tag von einer professionellen <span data-descr="Werden auch Kampfrichter genannt und besthen oft mals aus alten Fahreren. ">Judge Crew bewertet.</span> <br />
+    Zusätzlich findet täglich ein Best Trick Contest statt. 
+</p>
+</div>
+
+<div id="jib"> 
+  <h3>Jibking</h3>
+<p class="jibking">
+Mit dem Jib King <span data-descr="Meist ist der Start der Season im Dezember.">startet</span> der Absolut Park jedes Jahr in die Contest-Saison.<br/>
+Bei diesem Event, der im Jib Park des Absolut Parks stattfindet, <br/>
+können Amateure und Pros ihre <span data-descr="Sind Tricks die die Fahrer auf den Rails und Boxen machen">Jib-Skills zeigen.</span> <br/>
+Der Contest ist offen für <span data-descr="Frauen und Männer aller Altersklassen!">alle</span> Ski- und Snowboardfahrer <br/>
+Auf die Sieger bei den gesponserten Fahrern wartet ein ordentliches Preisgeld. <br/> 
+</p>
+</div>
+
+<form>
+  <label for="input1">Bitte geben Sie ein für welches Event Sie Tickets wollen</label>
+  <input id="input1" required>
+  <br/> 
+  <br/> 
+  <br/> 
+  <label for="input2">Bitte geben Sie die Anzahl an</label>
+  <input id="input2" required type="number">
+</form>
+
+<br/> 
+<br/>
+<br/> 
+
+<a class= "absolut" href="https://www.absolutpark.com/de/" target="_blank">Für meehr Infos schau einfach mal hier vorbei!</a>
+<br/> 
+<br/> 
+
+
+<h3> TEAM RIDER </h3> 
+
+<p>Snowboarder:</p>
+<p class="teamridersnowboard">Stale Sandbeack, Torgeir Bergrem, Marko Grilic ...  </p>
+
+
+
+<p>Skier:</p>
+<p class="teamriderski">Lisa Zimmermann, Regina Rathgeb, Luggi Brucic ...  </p>
+
+<div class="Input">
+  <div class="field">
+      <Label>Interpret</Label>
+      <input type="text" name="interpret" id="interpret" placeholder="Interpret">
+  </div>
+  <div class="field">
+      <Label>Price</Label>
+      <input type="number" name="price" id="price" placeholder="Price">
+  </div>
+</div>
+<button id="enter-Button" type="submit">Enter Event</button>
+<div id="display">
+  <h4>Events Tabelle</h4>
+  <tr>
+      <th id="interpretSpalte">Interpret</th>
+      <th id="priceSpalte">Price</th>
+      <th id="deleteSpalte"><br/> </th>
+  </tr>
+</div>
+
+</main> 
+<br/>
+<footer>
+</footer>
+
+
+</body>
+
+</html>
