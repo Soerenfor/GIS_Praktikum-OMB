@@ -10,3 +10,7 @@
 ### **3. Typescript**
  * Code: https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe3
  * GitHub Pages: http://127.0.0.1:5500/aufgabe3/event.html
+
+### **4. DOM-Events**
+ * Code: https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe4
+ * GitHub Pages: http://127.0.0.1:5500/aufgabe4/event.html
