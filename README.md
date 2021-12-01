@@ -14,3 +14,7 @@
 ### **4. DOM-Events**
  * Code: https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe4
  * GitHub Pages: http://127.0.0.1:5500/aufgabe4/event.html
+
+### **5. Local-Storage**
+ * Code:https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe5
+ * GitHub Pages: http://127.0.0.1:5500/aufgabe5/event.html
