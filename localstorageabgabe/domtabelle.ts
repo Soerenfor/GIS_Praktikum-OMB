@@ -13,7 +13,6 @@ namespace EventTabelle {
   loadButton.addEventListener("click", loadButtonHandler);
   
  
-
   function buttonHandler(): void {
     let interpretValue: string = inputIntpret.value;
     let priceValue: number = Number(inputPrice.value);
@@ -43,6 +42,7 @@ namespace EventTabelle {
       neueZeile.removeChild(neuLöschen);
     }
 }
+ 
 
  
   interface ConcertEvent {
@@ -72,6 +72,6 @@ namespace EventTabelle {
     display.textContent = stringFromLocalStorage;
     
 }
+
 }
-  
-  
+ 
