@@ -18,3 +18,8 @@
 ### **5. Local-Storage**
  * Code:https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/localstorageabgabe
  * GitHub Pages: http://127.0.0.1:5500/localstorageabgabe/event.html
+ 
+### **6. Server-Client**
+ * Code:https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe6_client
+ * https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe6_server
+ 
