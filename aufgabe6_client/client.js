@@ -18,8 +18,11 @@ var Client;
         let query = new URLSearchParams(formData);
         let urlwithQuery = url + path + "?" + query.toString();
         let response = await fetch(urlwithQuery);
-        let responsetext = await response.text();
-        console.log(responsetext);
+        let responseText = await response.text();
+        let ausgabe = document.createElement("div");
+        ausgabe.textContent = responseText;
+        display.appendChild(ausgabe);
+        console.log(responseText);
     }
 })(Client || (Client = {}));
 //# sourceMappingURL=client.js.map

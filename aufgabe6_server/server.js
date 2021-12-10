@@ -16,9 +16,12 @@ var Server;
                 break;
             case "/convertDate":
                 let date = url.searchParams.get("date");
-                let month = url.searchParams.get("month");
-                let year = url.searchParams.get("year");
-                response.write("Tag:" + date + "; Monat" + month + "; Jahr" + year);
+                console.log(date);
+                // let month: string = url.searchParams.get("month");
+                //   console.log(month);
+                // let year: string = url.searchParams.get("year");
+                // console.log(year);
+                response.write("Datum:" + date);
                 break;
             default:
                 response.statusCode = 404;

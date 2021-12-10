@@ -16,20 +16,18 @@ namespace Client {
 
     console.log(datum, sendbutton);
 
-
-
     async function sendform(): Promise <void> {
         let formData: FormData = new FormData(datum);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         let urlwithQuery: string = url + path + "?" + query.toString(); 
 
         let response: Response = await fetch(urlwithQuery);
-        let responsetext: string = await response.text();
-        console.log(responsetext);
+        let responseText: string = await response.text();
+
+        let ausgabe: HTMLElement = document.createElement("div");
+        ausgabe.textContent = responseText;
+        display.appendChild(ausgabe);
+        console.log(responseText);
         
-
-
-
-
     }
 }

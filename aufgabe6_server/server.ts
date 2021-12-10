@@ -20,9 +20,12 @@ const server: http.Server = http.createServer((request: http.IncomingMessage, re
             break;
             case "/convertDate":
                 let date: string = url.searchParams.get("date");
-                let month: string = url.searchParams.get("month");
-                let year: string = url.searchParams.get("year");
-                response.write("Tag:" + date + "; Monat" + month + "; Jahr" + year );
+                console.log(date);
+               // let month: string = url.searchParams.get("month");
+             //   console.log(month);
+               // let year: string = url.searchParams.get("year");
+               // console.log(year);
+                response.write("Datum:" + date );
                 break;
                 
             default:
