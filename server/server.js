@@ -12,7 +12,7 @@ var Server;
         let url = new URL(request.url || "", `http://${request.headers.host}`);
         switch (url.pathname) {
             case "/":
-                response.write("Hello World");
+                response.write("Server erreichbar");
                 break;
             case "/greetings":
                 let name = url.searchParams.get("name");

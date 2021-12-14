@@ -1,9 +1,8 @@
-import { urlToHttpOptions } from "url";
 
 namespace Client {
     console.log("Client läuft");
     const url: string = "http://127.0.0.1:3000";
-    const path: string = "/converteDate";
+    const path: string = "/convertDate";
 
     const datum: HTMLFormElement = <HTMLFormElement>document.getElementById("Datum");
     const sendbutton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("send-button");
@@ -14,7 +13,6 @@ namespace Client {
         sendform();
     });
 
-    console.log(datum, sendbutton);
 
     async function sendform(): Promise <void> {
         let formData: FormData = new FormData(datum);
@@ -24,10 +22,11 @@ namespace Client {
         let response: Response = await fetch(urlwithQuery);
         let responseText: string = await response.text();
 
-        let ausgabe: HTMLElement = document.createElement("div");
+        let ausgabe: HTMLElement = document.createElement("p");
         ausgabe.textContent = responseText;
         display.appendChild(ausgabe);
         console.log(responseText);
+        
         
     }
 }

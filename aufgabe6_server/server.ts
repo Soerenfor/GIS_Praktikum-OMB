@@ -21,11 +21,7 @@ const server: http.Server = http.createServer((request: http.IncomingMessage, re
             case "/convertDate":
                 let date: string = url.searchParams.get("date");
                 console.log(date);
-               // let month: string = url.searchParams.get("month");
-             //   console.log(month);
-               // let year: string = url.searchParams.get("year");
-               // console.log(year);
-                response.write("Datum:" + date );
+                response.write("Datum: " + date);
                 break;
                 
             default:
@@ -37,6 +33,7 @@ const server: http.Server = http.createServer((request: http.IncomingMessage, re
    );
 server.listen(port, hostname, () => {
        console.log(`Server running at http://${hostname}:${port}`);
+       
    });
    
 }

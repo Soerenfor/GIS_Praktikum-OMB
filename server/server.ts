@@ -16,7 +16,7 @@ const server: http.Server = http.createServer((request: http.IncomingMessage, re
 
     switch (url.pathname){
         case "/":
-            response.write("Hello World");
+            response.write("Server erreichbar");
             break;
             case "/greetings":
                 let name: string = url.searchParams.get("name");

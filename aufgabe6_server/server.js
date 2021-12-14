@@ -17,11 +17,7 @@ var Server;
             case "/convertDate":
                 let date = url.searchParams.get("date");
                 console.log(date);
-                // let month: string = url.searchParams.get("month");
-                //   console.log(month);
-                // let year: string = url.searchParams.get("year");
-                // console.log(year);
-                response.write("Datum:" + date);
+                response.write("Datum: " + date);
                 break;
             default:
                 response.statusCode = 404;
