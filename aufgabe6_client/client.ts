@@ -13,7 +13,6 @@ namespace Client {
         sendform();
     });
 
-
     async function sendform(): Promise <void> {
         let formData: FormData = new FormData(datum);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
