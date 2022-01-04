@@ -1,9 +1,9 @@
 import * as http from "http";
 import * as mongo from "mongodb";
 
-const hostname: string = "127.0.0.1"; // localhost
+const hostname: string = "127.0.0.1"; 
 const port: number = 3000;
-const mongoUrl: string = "mongodb://localhost:27017"; // für lokale MongoDB
+const mongoUrl: string = "mongodb://localhost:27017"; 
 let mongoClient: mongo.MongoClient = new mongo.MongoClient(mongoUrl);
 
 async function dbFind(
@@ -18,7 +18,7 @@ async function dbFind(
       .collection(collection)
       .find(requestObject)
       .toArray();
-    // console.log(result, requestObject); // bei Fehlern zum Testen
+    
       response.setHeader("Content-Type", "application/json");
       response.write(JSON.stringify(result));
   }
@@ -36,7 +36,7 @@ async function dbAddOrEdit(
 const server: http.Server = http.createServer(
     async (request: http.IncomingMessage, response: http.ServerResponse) => {
       response.statusCode = 200;
-      // response.setHeader("Access-Control-Allow-Origin", "*"); // bei CORS Fehler
+      
       let url: URL = new URL(request.url || "", `http://${request.headers.host}`);
       
       switch (url.pathname) {
@@ -48,7 +48,7 @@ const server: http.Server = http.createServer(
                 "interpret",
                 "price",
                 {
-                  price: Number(url.searchParams.get("price")), // von String zu Zahl konvertieren
+                  price: Number(url.searchParams.get("price")), 
                 },
                 response
               );

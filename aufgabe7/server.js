@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const http = require("http");
 const mongo = require("mongodb");
-const hostname = "127.0.0.1"; // localhost
+const hostname = "127.0.0.1";
 const port = 3000;
-const mongoUrl = "mongodb://localhost:27017"; // für lokale MongoDB
+const mongoUrl = "mongodb://localhost:27017";
 let mongoClient = new mongo.MongoClient(mongoUrl);
 async function dbFind(db, collection, requestObject, response) {
     await mongoClient.connect();
@@ -13,7 +13,6 @@ async function dbFind(db, collection, requestObject, response) {
         .collection(collection)
         .find(requestObject)
         .toArray();
-    // console.log(result, requestObject); // bei Fehlern zum Testen
     response.setHeader("Content-Type", "application/json");
     response.write(JSON.stringify(result));
 }
@@ -25,7 +24,6 @@ async function dbAddOrEdit(db, collection, request) {
 }
 const server = http.createServer(async (request, response) => {
     response.statusCode = 200;
-    // response.setHeader("Access-Control-Allow-Origin", "*"); // bei CORS Fehler
     let url = new URL(request.url || "", `http://${request.headers.host}`);
     switch (url.pathname) {
         case "/concertEvents": {
@@ -33,7 +31,7 @@ const server = http.createServer(async (request, response) => {
             switch (request.method) {
                 case "GET":
                     await dbFind("interpret", "price", {
-                        price: Number(url.searchParams.get("price")), // von String zu Zahl konvertieren
+                        price: Number(url.searchParams.get("price")),
                     }, response);
                     break;
                 case "POST":

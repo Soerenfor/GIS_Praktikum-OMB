@@ -6,7 +6,10 @@ namespace EventTabelle {
   const button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("enter-Button");
   button.addEventListener("click", buttonHandler);
   
-  
+  interface KonzertEvent{
+    interpret: string;
+    price: number;
+  }
     
     
   function buttonHandler(): void {
@@ -37,22 +40,18 @@ namespace EventTabelle {
       neueZeile.removeChild(neuePriceElement);
       neueZeile.removeChild(neuLöschen);
     }
+    let konzertEvent: KonzertEvent = {
+      interpret: interpretValue, 
+      price: priceValue
+    };
+    post(konzertEvent);
 }
 
-
-  async function sendJSONStringWithPOST(
-  url: RequestInfo,
-  jsonString: string
-): Promise<void> {
-  await fetch(url, { method: "post", body: jsonString });
+  async function post(konzertEvent: KonzertEvent): Promise<void> {
+  console.log(konzertEvent);
+  await fetch("http://localhost:3000/concertEvents", {
+    method: "POST",
+    body: JSON.stringify(konzertEvent)
+  });
 }
-
-  sendJSONStringWithPOST(
-  "http://localhost:3000/conertEvents",
-  JSON.stringify({
-    interpret: inputIntpret.value ,
-    price: inputPrice.value,
-    
-  })
-);
 }
