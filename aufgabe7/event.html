@@ -11,7 +11,7 @@
         
         
         <link rel="stylesheet" href="style.css">
-        <script src="domtabelle.js" defer></script> 
+        <script src="./Tabelle/tabelle.js" defer></script> 
     </head>
     <body>
       <nav>
@@ -124,12 +124,15 @@ Auf die Sieger bei den gesponserten Fahrern wartet ein ordentliches Preisgeld. <
 </div>
 <button id="enter-Button" type="submit">Enter Event</button>
 <div id="display">
+  
   <h4>Events Tabelle</h4>
-  <tr>
+  <tr class = "table">
+    <tbody id = "table">
       <th id="interpretSpalte">Interpret</th>
       <th id="priceSpalte">Price</th>
       <th id="deleteSpalte"><br/> </th>
   </tr>
+</tbody>
 </div>
 
 </main> 
