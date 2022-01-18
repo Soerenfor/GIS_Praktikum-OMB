@@ -24,6 +24,6 @@
  * https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe6_server
  
 ### **7. Datenbanken**
- * https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe7
+ * https://github.com/Soerenfor/GIS_Praktikum-OMB/tree/main/aufgabe9
   
  
