@@ -26,13 +26,13 @@ var EventTabelle;
     }
     async function post(konzertEvent) {
         console.log(konzertEvent);
-        await fetch("http://localhost:3000/concertEvents", {
+        await fetch("http://localhost:3002/concertEvents", {
             method: "POST",
             body: JSON.stringify(konzertEvent)
         });
     }
     async function get() {
-        let response = await fetch("http://localhost:3000/concertEvents", {
+        let response = await fetch("http://localhost:3002/concertEvents", {
             method: "GET"
         });
         let text = await response.text();
