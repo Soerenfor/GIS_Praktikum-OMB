@@ -35,14 +35,14 @@ namespace EventTabelle {
     
     async function post(konzertEvent: KonzertEvent): Promise<void> {
       console.log(konzertEvent);
-      await fetch("http://localhost:3000/concertEvents", {
+      await fetch("http://localhost:3002/concertEvents", {
         method: "POST",
         body: JSON.stringify(konzertEvent)
       });
     }
     
     async function get(): Promise<void> {
-      let response: Response = await fetch("http://localhost:3000/concertEvents", {
+      let response: Response = await fetch("http://localhost:3002/concertEvents", {
         method: "GET"
       });
       let text: string = await response.text();
